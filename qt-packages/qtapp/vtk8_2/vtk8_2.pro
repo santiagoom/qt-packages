@@ -24,3 +24,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 
 
+include(D:\gitrepos\SOUPdependency\vtk-8.2\vtk-8.2.pri)
