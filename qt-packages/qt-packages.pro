@@ -1,5 +1,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    qtapp \
-    qtapp
+#    Libraries \
+    QtClasses
+
+

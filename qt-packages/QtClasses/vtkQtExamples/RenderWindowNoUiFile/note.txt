@@ -1,0 +1,8 @@
+
+
+
+
+
+QApplication works fine with cmake
+Clion run correctly
+
