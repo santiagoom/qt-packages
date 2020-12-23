@@ -10,8 +10,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->cubeGridLayout->removeWidget(ui->cubeWidget);
     ui->cubeGridLayout->addWidget(new CubeWidget);
+    ui->cubeGridLayout->addWidget(new CubeWidget);
+    ui->cubeGridLayout->addWidget(new CubeWidget);
+    ui->cubeGridLayout->addWidget(new CubeWidget);
 
     ui->cubeGridLayout->removeWidget(ui->cubeWidget);
+    ui->sphereGridLayout->addWidget(new SphereWidget);
     ui->sphereGridLayout->addWidget(new SphereWidget);
 
 }

@@ -4,6 +4,7 @@ SUBDIRS += \
 #    qtQFileDialog \
 #    qtQMessageBox \
 #    vtkQtExamples \
-    QtQVTKWidget2 \
+#    QtQVTKWidget2 \
 #    qtQVTKWidget \
 #    QtQVTKWidget3
+    QtQVTKWidgetSeparate
