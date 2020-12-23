@@ -6,6 +6,9 @@ QtQVTKWidget2 practise
 
 QtQVTKWidget3 modify from qtQVTKWidget
 
+include should add in *widget.cpp
+otherwise below error occurs
+vtkNew 使用了未定义类型“vtkGenericOpenGLRenderWindow”
 
 
 
