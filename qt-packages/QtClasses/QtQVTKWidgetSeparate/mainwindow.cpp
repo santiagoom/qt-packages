@@ -24,24 +24,32 @@ MainWindow::~MainWindow() {
 
 void MainWindow::initPolyData() {
 
-//    QString name = QFileDialog::getOpenFileName(this,tr("Open centerline file"),
-//                                                m_exchangeDatDir,tr("*.ctl"));
-//    if(name.isEmpty())
-//        return;
-//    clear(m_groundTruthList);
-//    ESLabelIO::loadCenterline(name,m_groundTruthList);
-//    vtkSmartPointer<vtkPolyData> polydata = createPolyLine(m_groundTruthList);
     double color[3] = {0, 1, 0};
-//    ui->containerWidget->addPolyData(groundTruthName,polydata,color);
-//    ui->groundTruthCtl->setChecked(true);
+    double color1[3] = {1, 0, 0};
 
-    std::string filename = "F:\\data\\esdata\\esdata\\experiment\\stls\\CTA20140728_DENGXILIAN\\stl\\AT_6_CTA20140728_DENGXILIAN_prediction.stl";
-//    std::string filename = "D:\\gitrepoe\\vtk-examples\\code\\cpp\\cmake-build-release\\vtk-examples\\cpp-examples\\working-with-3d-data\\medical\\Label2.vtp";
+    std::string filename1 = "F:\\data\\esdata\\esdata\\experiment\\stl\\CTA20140728_DENGXILIAN\\AT_6_CTA20140728_DENGXILIAN_predictionv1.stl";
+    std::string filename2 = "F:\\data\\esdata\\esdata\\experiment\\stl\\CTA20140728_DENGXILIAN\\CM_1_CTA20140728_DENGXILIAN_predictionv1.stl";
+    std::string filename3 = "F:\\data\\esdata\\esdata\\experiment\\stl\\CTA20140728_DENGXILIAN\\LA_2_CTA20140728_DENGXILIAN_predictionv1.stl";
+    std::string filename4 = "F:\\data\\esdata\\esdata\\experiment\\stl\\CTA20140728_DENGXILIAN\\levelset_1_CTA20140728_DENGXILIAN_predictionv1.stl";
+    std::string filename5 = "F:\\data\\esdata\\esdata\\experiment\\stl\\CTA20140728_DENGXILIAN\\LV_3_CTA20140728_DENGXILIAN_predictionv1.stl";
+    std::string filename6 = "F:\\data\\esdata\\esdata\\experiment\\stl\\CTA20140728_DENGXILIAN\\PA_7_CTA20140728_DENGXILIAN_predictionv1.stl";
+    std::string filename7 = "F:\\data\\esdata\\esdata\\experiment\\stl\\CTA20140728_DENGXILIAN\\RA_4_CTA20140728_DENGXILIAN_predictionv1.stl";
+    std::string filename8 = "F:\\data\\esdata\\esdata\\experiment\\stl\\CTA20140728_DENGXILIAN\\RV_5_CTA20140728_DENGXILIAN_predictionv1.stl";
 
-    vtkSmartPointer<vtkSTLReader> reader = vtkSmartPointer<vtkSTLReader>::New();
-    reader->SetFileName(filename.c_str());
-    reader->Update();
-    ui->myVTKWidget->addPolyData("at", reader->GetOutput(), color);
+    {
+        vtkSmartPointer<vtkSTLReader> reader = vtkSmartPointer<vtkSTLReader>::New();
+
+        reader->SetFileName(filename1.c_str());
+        reader->Update();
+        ui->myVTKWidget->addPolyData("1", reader->GetOutput(), color);
+    }
+
+    {
+        vtkSmartPointer<vtkSTLReader> reader = vtkSmartPointer<vtkSTLReader>::New();
+        reader->SetFileName(filename2.c_str());
+        reader->Update();
+        ui->myVTKWidget->addPolyData("2", reader->GetOutput(), color1);
+    }
 
 
 }
