@@ -1,7 +1,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-#    Libraries \
-    QtClasses
+    Libraries \
+#    QtClasses
 
 
