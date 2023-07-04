@@ -9,4 +9,7 @@ SUBDIRS += \
 #    QtQVTKWidget3
 #    QtQVTKWidgetSeparate \
 #    QtQCheckBox \
-    QtQTextEdit
+#    QtQTextEdit
+
+
+
